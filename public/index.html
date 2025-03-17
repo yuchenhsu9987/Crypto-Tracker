@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/bitcoin.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#F7931A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="author" content="許育宸 Rufushsu" />
+    <meta name="contact" content="rufushsu9987@gmail.com" />
+    <meta name="description" content="加密貨幣追蹤器 - 實時價格、圖表和分析" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/bitcoin.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>加密貨幣追蹤器</title>
+    <style>
+      /* 基礎重置和全局樣式 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      html {
+        height: -webkit-fill-available;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+        background-color: #f5f5f5;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+
+      /* 確保內容不會被版權欄遮擋 */
+      #root {
+        padding-bottom: calc(70px + env(safe-area-inset-bottom));
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* 版權欄基礎樣式 */
+      .copyright {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(24, 24, 27, 0.95);
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+        font-size: 14px;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .copyright span {
+        white-space: nowrap;
+      }
+
+      .copyright a {
+        color: #F7931A;
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: rgba(247, 147, 26, 0.1);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .copyright a:active {
+        transform: scale(0.95);
+        background-color: rgba(247, 147, 26, 0.2);
+      }
+
+      /* 移動端適配 */
+      @media (max-width: 768px) {
+        .copyright {
+          flex-direction: column;
+          gap: 8px;
+          padding: 10px;
+          padding-bottom: calc(10px + env(safe-area-inset-bottom));
+          font-size: 13px;
+        }
+
+        .copyright a {
+          padding: 8px 16px;
+          width: auto;
+          max-width: 90%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      /* 深色模式支持 */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #121212;
+          color: #ffffff;
+        }
+
+        .copyright {
+          background-color: rgba(24, 24, 27, 0.98);
+        }
+
+        .copyright a {
+          background-color: rgba(247, 147, 26, 0.15);
+        }
+
+        .copyright a:active {
+          background-color: rgba(247, 147, 26, 0.25);
+        }
+      }
+
+      /* 橫屏模式優化 */
+      @media (orientation: landscape) and (max-height: 600px) {
+        .copyright {
+          position: static;
+          margin-top: 20px;
+        }
+
+        #root {
+          padding-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>您需要啟用 JavaScript 才能運行此應用。</noscript>
+    <div id="root"></div>
+    <footer class="copyright">
+      <span>© 2025 Crypto Tracker</span>
+      <span>作者：許育宸 Rufushsu</span>
+      <a href="mailto:rufushsu9987@gmail.com" aria-label="發送郵件給作者">
+        rufushsu9987@gmail.com
+      </a>
+    </footer>
+  </body>
+</html> 

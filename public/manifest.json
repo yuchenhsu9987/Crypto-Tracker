@@ -1,0 +1,42 @@
+{
+    "short_name": "加密貨幣追蹤器",
+    "name": "加密貨幣追蹤器 - 實時價格、圖表和分析",
+    "author": "許育宸 Rufushsu",
+    "contact": "rufushsu9987@gmail.com",
+    "lang": "zh-TW",
+    "icons": [
+      {
+        "src": "bitcoin.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#F7931A",
+    "background_color": "#121212",
+    "prefer_related_applications": false,
+    "categories": ["finance", "cryptocurrency"],
+    "screenshots": [],
+    "shortcuts": [
+      {
+        "name": "加密貨幣追蹤器",
+        "url": "/",
+        "description": "查看即時加密貨幣價格和分析"
+      }
+    ],
+    "related_applications": [],
+    "iarc_rating_id": "",
+    "share_target": {
+      "action": "/share-target",
+      "method": "GET",
+      "params": {
+        "title": "title",
+        "text": "text",
+        "url": "url"
+      }
+    }
+  } 
